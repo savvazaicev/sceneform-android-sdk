@@ -43,7 +43,17 @@ dependencies {
     api 'com.google.android.filament:gltfio-android:1.7.0'
     implementation files("../libs/libsceneform_runtime_schemas.jar")
 
-    api "com.google.ar:core:1.16.0"
+//<<<<<<< HEAD:sceneformsrc/sceneform/build.gradle
+//    api "com.google.ar:core:1.16.0"
+//=======
+    // Provides ArFragment, and other Sceneform UX resources:
+    implementation "com.google.ar.sceneform.ux:sceneform-ux:1.15.0"
+
+    // Use the Sceneform UX Package built from the source files included in the sceneformux folder.
+    //api project(":sceneformux")
+
+    // Alternatively, use ArSceneView without the UX dependency.
+    //implementation "com.google.ar.sceneform:core:1.15.0"
 
     implementation "com.android.support:appcompat-v7:28.0.0"
     implementation "com.android.support:design:28.0.0"
