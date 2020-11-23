@@ -102,7 +102,7 @@ public abstract class BaseArFragment extends Fragment
   private PlaneDiscoveryController planeDiscoveryController;
   private TransformationSystem transformationSystem;
   private GestureDetector gestureDetector;
-  private FrameLayout frameLayout;
+  AutoFitFrameLayout frameLayout;
   private boolean isStarted;
   private boolean canRequestDangerousPermissions = true;
   @Nullable private OnSessionInitializationListener onSessionInitializationListener;
@@ -159,7 +159,7 @@ public abstract class BaseArFragment extends Fragment
   public View onCreateView(
       LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
     frameLayout =
-        (FrameLayout) inflater.inflate(R.layout.sceneform_ux_fragment_layout, container, false);
+        (AutoFitFrameLayout) inflater.inflate(R.layout.sceneform_ux_fragment_layout, container, false);
     arSceneView = (ArSceneView) frameLayout.findViewById(R.id.sceneform_ar_scene_view);
 
     // Setup the instructions view.
